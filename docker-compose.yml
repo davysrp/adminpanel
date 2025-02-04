@@ -1,0 +1,43 @@
+services:
+
+
+    adminv11_frankenphp:
+        container_name: adminv11_frankenphp
+        build:
+            context: .
+            dockerfile: ./.docker/frankenphp/Dockerfile
+        entrypoint: .docker/frankenphp/bash
+        environment:
+            APP_ENVIRONMENT: ${APP_ENV}
+        ports:
+            - "5100:8000"
+        volumes:
+            - .:/app
+        networks:
+            - default
+        restart: on-failure:3
+
+    meilisearch_mysql:
+        image: mysql:5.7
+        container_name: adminv11_mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: adminv11
+            MYSQL_USER: adminv11
+            MYSQL_PASSWORD: adminv11
+        volumes:
+            - adminv11_mysql:/var/lib/mysql
+            - .docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+        ports:
+            - "3306:3306"
+        networks:
+            - default
+        restart: unless-stopped
+
+networks:
+    default:
+        driver: bridge
+
+volumes:
+    adminv11_data:
+    adminv11_mysql:
