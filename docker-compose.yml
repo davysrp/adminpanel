@@ -29,7 +29,7 @@ services:
             - adminv11_mysql:/var/lib/mysql
             - .docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
         ports:
-            - "3306:3306"
+            - "3307:3307"
         networks:
             - default
         restart: unless-stopped
