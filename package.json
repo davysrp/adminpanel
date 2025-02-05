@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",
+        "@ryangjchandler/alpine-clipboard": "^2.3.0",
         "bootstrap": "^5.3.3"
     }
 }
