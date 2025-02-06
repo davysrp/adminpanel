@@ -16,6 +16,79 @@
         @endif
     </head>
     <body>
+
+    <div class="small-navbar d-flex justify-content-between">
+        <div>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+        <div>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+
+    <!-- Main Mega Menu Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+
+                    <!-- Mega Menu with Dropdown -->
+                    <li class="nav-item dropdown mega-menu">
+                        <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown">
+                            Mega Menu
+                        </a>
+                        <div class="dropdown-menu p-4">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>Category 1</h5>
+                                    <a class="dropdown-item" href="#">Sub-item 1</a>
+                                    <a class="dropdown-item" href="#">Sub-item 2</a>
+                                    <a class="dropdown-item" href="#">Sub-item 3</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Category 2</h5>
+                                    <a class="dropdown-item" href="#">Sub-item 4</a>
+                                    <a class="dropdown-item" href="#">Sub-item 5</a>
+                                    <a class="dropdown-item" href="#">Sub-item 6</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Category 3</h5>
+                                    <a class="dropdown-item" href="#">Sub-item 7</a>
+                                    <a class="dropdown-item" href="#">Sub-item 8</a>
+                                    <a class="dropdown-item" href="#">Sub-item 9</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Regular Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#">SEO</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
         {{ $slot }}
         @livewireScriptConfig
     </body>
