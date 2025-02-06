@@ -1,0 +1,26 @@
+.small-navbar {
+    background: #333;
+    color: white;
+    padding: 5px 15px;
+}
+.small-navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Mega Menu Styling */
+.mega-menu {
+    position: static;
+}
+.dropdown-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-menu .row {
+    padding: 20px;
+}
